@@ -10,7 +10,9 @@ var PORT = 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
+// Server routing files
+require("./routing/apiRoutes")(app);
+require("./routing/htmlRoutes")(app);
 
 // App listening on port
 app.listen(PORT, function() {
