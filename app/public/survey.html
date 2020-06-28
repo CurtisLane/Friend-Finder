@@ -8,51 +8,197 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
+    
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <title>Welcome to Friend Finder!</title>
+    
+    <title>Friend Finder Survey</title>
 </head>
 <body class="bg-light">
+
+    <!-- Survey Questions: [drop down choices: (1) strongly disagree, (2) disagree, (3) neither agree or disagree, (4) agree, (5) strongly agree]
+        1. In order to have my respect, you have to earn it.
+        2. Most people have my best interests in mind.
+        3. In general I am comfortable with being myself around other people.
+        4. I enjoy being with large groups of people for extended periods of time.
+        5. Once trust is broken, it can never be reestablished.
+        6. Most of my friends would say that I'm a positive and uplifting person to be around.
+        7. There's nothing wrong with being brutally honest, even if it hurts someone's feelings.
+        8. It's ok to get back at someone who has wronged you.
+        9. I would rather be chasing a goal than enjoying leisure.
+        10. Most of the people on this planet are good natured and kind.  -->
     
     <div class="container mt-5">
         <div class="row">
-            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 offset-sm-1 offset-md-2 offset-lg-3">
-                <div class="card shadow p-1 mb-5 bg-white rounded">
-                    <!-- replacing single img line with carosel -->
-                    <!-- <img src="..." class="card-img-top" alt="..."> -->
-                    <div id="carousel" class="carousel slide px-4 pt-4" data-ride="carousel">
-                        <div class="carousel-inner" style="max-height: 12rem">
-                          <div class="carousel-item active">
-                              <img src="./images/Friends-on-Dock.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="./images/friendGroup.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="./images/essential-qualities-good-friend.jpg" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                      </div>
-                    <!-- carosel end -->
-                    <div class="card-body">
-                      <h5 class="card-title">Find a Friend</h5>
-                      <p class="card-text">Take our patented compatability survey to find the perfect match for you.</p>
-                      <a href="/survey" class="btn btn-primary">Survey</a>
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+                <h1>Survey Questions</h1>
+                <hr class="my-4">
+                <form action="POST">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" class="form-control" id="name" required>
+                      <small class="form-text text-muted">* Required</small>
                     </div>
-                </div>
-                <div class="mx-auto text-center">
-                    <small>
-                        <a href="/">Friends List</a> | <a href="/">Github Repo</a>
-                    </small>
-                </div>
+                    <hr class="my-4">
+                    <div class="form-group">
+                      <label for="photo">Put your photo URL in here</label>
+                      <input type="text" class="form-control" id="photo" required>
+                      <small class="form-text text-muted">* Required</small>
+                    </div>
+                    <hr class="my-4">
+                    <div class="form-group">
+                        <label for="questionOne">1. In order to have my respect, you have to earn it.</label>
+                        <select class="form-control" id="questionOne">
+                            <option default value selected="selected" disabled>Select an option</option>
+                            <option value="5">(5) Strongly agree</option>
+                            <option value="4">(4) Agree</option>
+                            <option value="3">(3) Neither agree or disagree</option>
+                            <option value="2">(2) Disagree</option>
+                            <option value="1">(1) Strongly disagree</option>
+                        </select>
+                    </div>
+                    <hr class="my-4">
+                    <div class="form-group">
+                        <label for="questionTwo">2. Most people have my best interests in mind.</label>
+                        <select class="form-control" id="questionTwo">
+                            <option default value selected="selected" disabled>Select an option</option>
+                            <option value="5">(5) Strongly agree</option>
+                            <option value="4">(4) Agree</option>
+                            <option value="3">(3) Neither agree or disagree</option>
+                            <option value="2">(2) Disagree</option>
+                            <option value="1">(1) Strongly disagree</option>
+                        </select>
+                    </div>
+                    <hr class="my-4">
+                    <div class="form-group">
+                        <label for="questionThree">3. In general I am comfortable with being myself around other people.</label>
+                        <select class="form-control" id="questionThree">
+                            <option default value selected="selected" disabled>Select an option</option>
+                            <option value="5">(5) Strongly agree</option>
+                            <option value="4">(4) Agree</option>
+                            <option value="3">(3) Neither agree or disagree</option>
+                            <option value="2">(2) Disagree</option>
+                            <option value="1">(1) Strongly disagree</option>
+                        </select>
+                    </div>
+                    <hr class="my-4">
+                    <div class="form-group">
+                        <label for="questionFour">4. I enjoy being with large groups of people for extended periods of time.</label>
+                        <select class="form-control" id="questionFour">
+                            <option default value selected="selected" disabled>Select an option</option>
+                            <option value="5">(5) Strongly agree</option>
+                            <option value="4">(4) Agree</option>
+                            <option value="3">(3) Neither agree or disagree</option>
+                            <option value="2">(2) Disagree</option>
+                            <option value="1">(1) Strongly disagree</option>
+                        </select>
+                    </div>
+                    <hr class="my-4">
+                    <div class="form-group">
+                        <label for="questionFive">5. Once trust is broken, it can never be reestablished.</label>
+                        <select class="form-control" id="questionFive">
+                            <option default value selected="selected" disabled>Select an option</option>
+                            <option value="5">(5) Strongly agree</option>
+                            <option value="4">(4) Agree</option>
+                            <option value="3">(3) Neither agree or disagree</option>
+                            <option value="2">(2) Disagree</option>
+                            <option value="1">(1) Strongly disagree</option>
+                        </select>
+                    </div>
+                    <hr class="my-4">
+                    <div class="form-group">
+                        <label for="questionSix">6. Most of my friends would say that I'm a positive and uplifting person to be around.</label>
+                        <select class="form-control" id="questionSix">
+                            <option default value selected="selected" disabled>Select an option</option>
+                            <option value="5">(5) Strongly agree</option>
+                            <option value="4">(4) Agree</option>
+                            <option value="3">(3) Neither agree or disagree</option>
+                            <option value="2">(2) Disagree</option>
+                            <option value="1">(1) Strongly disagree</option>
+                        </select>
+                    </div>
+                    <hr class="my-4">
+                    <div class="form-group">
+                        <label for="questionSeven">7. There's nothing wrong with being brutally honest, even if it hurts someone's feelings.</label>
+                        <select class="form-control" id="questionSeven">
+                            <option default value selected="selected" disabled>Select an option</option>
+                            <option value="5">(5) Strongly agree</option>
+                            <option value="4">(4) Agree</option>
+                            <option value="3">(3) Neither agree or disagree</option>
+                            <option value="2">(2) Disagree</option>
+                            <option value="1">(1) Strongly disagree</option>
+                        </select>
+                    </div>
+                    <hr class="my-4">
+                    <div class="form-group">
+                        <label for="questionEight">8. It's ok to get back at someone who has wronged you.</label>
+                        <select class="form-control" id="questionEight">
+                            <option default value selected="selected" disabled>Select an option</option>
+                            <option value="5">(5) Strongly agree</option>
+                            <option value="4">(4) Agree</option>
+                            <option value="3">(3) Neither agree or disagree</option>
+                            <option value="2">(2) Disagree</option>
+                            <option value="1">(1) Strongly disagree</option>
+                        </select>
+                    </div>
+                    <hr class="my-4">
+                    <div class="form-group">
+                        <label for="questionNine">9. I would rather be chasing a goal than enjoying leisure.</label>
+                        <select class="form-control" id="questionNine">
+                            <option default value selected="selected" disabled>Select an option</option>
+                            <option value="5">(5) Strongly agree</option>
+                            <option value="4">(4) Agree</option>
+                            <option value="3">(3) Neither agree or disagree</option>
+                            <option value="2">(2) Disagree</option>
+                            <option value="1">(1) Strongly disagree</option>
+                        </select>
+                    </div>
+                    <hr class="my-4">
+                    <div class="form-group">
+                        <label for="questionTen">10. Most of the people on this planet are good natured and kind.</label>
+                        <select class="form-control" id="questionTen">
+                            <option default value selected="selected" disabled>Select an option</option>
+                            <option value="5">(5) Strongly agree</option>
+                            <option value="4">(4) Agree</option>
+                            <option value="3">(3) Neither agree or disagree</option>
+                            <option value="2">(2) Disagree</option>
+                            <option value="1">(1) Strongly disagree</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary my-3" id="submit" data-toggle="modal" data-target="#friend-match-modal">Submit</button>
+                  </form>
             </div>
         </div>
     </div>
 
+    <footer class="mx-auto text-center mb-1">
+        <small>
+            <a href="/api/friends">Friends List</a> | <a href="https://github.com/CurtisLane/Friend-Finder">Github Repo</a>
+        </small>
+    </footer>
 
+    <!-- Modal -->
+    <div class="modal fade" id="friend-match-modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Your Perfect Friend Match is</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <h2 id="friend-match-name"></h2>
+                <img id="friend-match-img" src="">
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
 
     <!-- jQuery -->
@@ -85,25 +231,21 @@
                 ]
             }
             $.post('/api/friends', newFriend, function(data){
+                console.log(data)
+                
+            
+                $('#friend-match-modal').on('shown.bs.modal', function () {
+                    $('#myInput').trigger('focus')
+                    $('#friend-match-name').text(`Name: ${data.name}`)
+                    $('#friend-match-img').attr('src', data.photo)
+                })
                 
             })
 
 
-        }) // Dlose #sumbit on click handler
+        }) // Close #sumbit on click handler
         
         </script>
 </body>
 </html>
 
-
-<!-- Survey Questions: [drop down choices: (1) strongly disagree, (2) disagree, (3) neither agree or disagree, (4) agree, (5) strongly agree]
-    1. In order to have my respect, you have to earn it.
-    2. Most people have my best interests in mind.
-    3. In general I am comfortable with being myself around other people.
-    4. I enjoy being with large groups of people for extended periods of time.
-    5. Once trust is broken, it can never be reestablished.
-    6. Most of my friends would say that I'm a positive and uplifting person to be around.
-    7. There's nothing wrong with being brutally honest, even if it hurts someone's feelings.
-    8. It's ok to get back at someone who has wronged you.
-    9. I would rather be chasing a goal than enjoying leisure.
-    10. Most of the people on this planet are good natured and kind.  -->
