@@ -4,23 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>Welcome to Friend Finder!</title>
 </head>
-<body>
+<body class="bg-light">
     
-
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 offset-sm-1 offset-md-2 offset-lg-3">
+                <div class="card shadow p-1 mb-5 bg-white rounded">
+                    <!-- replacing single img line with carosel -->
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div id="carousel" class="carousel slide px-4 pt-4" data-ride="carousel">
+                        <div class="carousel-inner" style="max-height: 12rem">
+                          <div class="carousel-item active">
+                              <img src="./images/Friends-on-Dock.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./images/friendGroup.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./images/essential-qualities-good-friend.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+                    <!-- carosel end -->
+                    <div class="card-body">
+                      <h5 class="card-title">Find a Friend</h5>
+                      <p class="card-text">Take our patented compatability survey to find the perfect match for you.</p>
+                      <a href="/survey" class="btn btn-primary">Survey</a>
+                      <small>
+                          <a href="/">Friends List</a> | <a href="/">Github Repo</a>
+                      </small>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
 
 
 
 
     <!-- jQuery -->
-    
+    <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
     <!-- Bootstrap Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    
 </body>
 </html>
