@@ -13,28 +13,50 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Friend Finder Survey</title>
+    <title>Welcome to Friend Finder!</title>
 </head>
-<body>
-    <h1>Survey Page</h1>
-    <!-- Survey Questions: [drop down choices: (1) strongly disagree, (2) disagree, (3) neither agree or disagree, (4) agree, (5) strongly agree]
-        1. In order to have my respect, you have to earn it.
-        2. Most people have my best interests in mind.
-        3. In general I am comfortable with being myself around other people.
-        4. I enjoy being with large groups of people for extended periods of time.
-        5. Once trust is broken, it can never be reestablished.
-        6. Most of my friends would say that I'm a positive and uplifting person to be around.
-        7. There's nothing wrong with being brutally honest, even if it hurts someone's feelings.
-        8. It's ok to get back at someone who has wronged you.
-        9. I would rather be chasing a goal than enjoying leisure.
-        10. Most of the people on this planet are good natured and kind.  -->
+<body class="bg-light">
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 offset-sm-1 offset-md-2 offset-lg-3">
+                <div class="card shadow p-1 mb-5 bg-white rounded">
+                    <!-- replacing single img line with carosel -->
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div id="carousel" class="carousel slide px-4 pt-4" data-ride="carousel">
+                        <div class="carousel-inner" style="max-height: 12rem">
+                          <div class="carousel-item active">
+                              <img src="./images/Friends-on-Dock.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./images/friendGroup.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./images/essential-qualities-good-friend.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+                    <!-- carosel end -->
+                    <div class="card-body">
+                      <h5 class="card-title">Find a Friend</h5>
+                      <p class="card-text">Take our patented compatability survey to find the perfect match for you.</p>
+                      <a href="/survey" class="btn btn-primary">Survey</a>
+                    </div>
+                </div>
+                <div class="mx-auto text-center">
+                    <small>
+                        <a href="/">Friends List</a> | <a href="/">Github Repo</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
 
     <!-- jQuery -->
-    <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
     <!-- Bootstrap Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -62,8 +84,26 @@
                     $('#questionTen').val()
                 ]
             }
-        })
+            $.post('/api/friends', newFriend, function(data){
+                
+            })
 
-    </script>
+
+        }) // Dlose #sumbit on click handler
+        
+        </script>
 </body>
 </html>
+
+
+<!-- Survey Questions: [drop down choices: (1) strongly disagree, (2) disagree, (3) neither agree or disagree, (4) agree, (5) strongly agree]
+    1. In order to have my respect, you have to earn it.
+    2. Most people have my best interests in mind.
+    3. In general I am comfortable with being myself around other people.
+    4. I enjoy being with large groups of people for extended periods of time.
+    5. Once trust is broken, it can never be reestablished.
+    6. Most of my friends would say that I'm a positive and uplifting person to be around.
+    7. There's nothing wrong with being brutally honest, even if it hurts someone's feelings.
+    8. It's ok to get back at someone who has wronged you.
+    9. I would rather be chasing a goal than enjoying leisure.
+    10. Most of the people on this planet are good natured and kind.  -->
