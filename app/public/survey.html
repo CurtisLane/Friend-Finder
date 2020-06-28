@@ -167,7 +167,7 @@
                         </select>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary my-3" id="submit" data-toggle="modal" data-target="#friend-match-modal">Submit</button>
+                    <button type="submit" class="btn btn-primary my-3" id="submit">Submit</button>
                   </form>
             </div>
         </div>
@@ -233,12 +233,10 @@
             $.post('/api/friends', newFriend, function(data){
                 console.log(data)
                 
-            
-                $('#friend-match-modal').on('shown.bs.modal', function () {
-                    $('#myInput').trigger('focus')
-                    $('#friend-match-name').text(`Name: ${data.name}`)
-                    $('#friend-match-img').attr('src', data.photo)
-                })
+                $('#friend-match-name').text(data[0].name)
+                $('#friend-match-img').attr('src', data[0].photo)
+                $('#friend-match-modal').modal('show')
+                
                 
             })
 
