@@ -234,7 +234,7 @@
                 console.log(data)
                 
                 $('#friend-match-name').text(data[0].name)
-                $('#friend-match-img').attr('src', data[0].photo)
+                $('#friend-match-img').attr('src', data[data.length - 1].photo)
                 $('#friend-match-modal').modal('show')
                 
                 
