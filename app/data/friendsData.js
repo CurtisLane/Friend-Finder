@@ -47,6 +47,38 @@ let friendsArr = [
             1
           ]
     },
+    {
+        name: 'Amnot Analian',
+          photo: 'https://talesfromtheradiationage.files.wordpress.com/2014/01/kodos.jpg',
+          scores: [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+    },
+    {
+        name: 'Fortes Tingpurpose',
+          photo: 'https://www.adventhealth.com/sites/default/files/styles/fc_800x533/public/media/hero-woman-testing-sample-2000x1333.jpg?h=1d555a86&itok=9bNqsC0-',
+          scores: [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+    },
 ]
 
 module.exports = friendsArr;
