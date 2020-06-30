@@ -218,7 +218,7 @@
             $('#submit').click(function(event){
                 event.preventDefault();
 
-                if ($('#photo').valid() || $('#name').valid() || $('#questionOne').valid() || $('#questionTwo').valid() || $('#questionThree').valid() || $('#questionFour').valid() || $('#questionFive').valid() || $('#questionSix').valid() || $('#questionSeven').valid() || $('#questionEight').valid() || $('#questionNine').valid() || $('#questionTen').valid()){
+                if ($('#photo').valid() && $('#name').valid() && $('#questionOne').valid() && $('#questionTwo').valid() && $('#questionThree').valid() && $('#questionFour').valid() && $('#questionFive').valid() && $('#questionSix').valid() && $('#questionSeven').valid() && $('#questionEight').valid() && $('#questionNine').valid() && $('#questionTen').valid()){
             
                     let newFriend = {
                         name: $('#name').val().trim(),
