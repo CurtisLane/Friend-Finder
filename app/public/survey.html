@@ -219,35 +219,32 @@
 
                 if ($('#photo').valid() || $('#name').valid() || $('#questionOne').valid() || $('#questionTwo').valid() || $('#questionThree').valid() || $('#questionFour').valid() || $('#questionFive').valid() || $('#questionSix').valid() || $('#questionSeven').valid() || $('#questionEight').valid() || $('#questionNine').valid() || $('#questionTen').valid()){
             
-            
-
-                let newFriend = {
-                    name: $('#name').val().trim(),
-                    photo: $('#photo').val().trim(),
-                    scores: [
-                        $('#questionOne').val(),
-                        $('#questionTwo').val(),
-                        $('#questionThree').val(),
-                        $('#questionFour').val(),
-                        $('#questionFive').val(),
-                        $('#questionSix').val(),
-                        $('#questionSeven').val(),
-                        $('#questionEight').val(),
-                        $('#questionNine').val(),
-                        $('#questionTen').val()
-                    ]
-                }
-                $.post('/api/friends', newFriend, function(data){
-                    console.log(data)
-                    
-                    $('#friend-match-name').text(data[0].name)
-                    $('#friend-match-img').attr('src', data[data.length - 1].photo)
-                    $('#friend-match-modal').modal('show')
-                    
-                    
-                })
+                    let newFriend = {
+                        name: $('#name').val().trim(),
+                        photo: $('#photo').val().trim(),
+                        scores: [
+                            $('#questionOne').val(),
+                            $('#questionTwo').val(),
+                            $('#questionThree').val(),
+                            $('#questionFour').val(),
+                            $('#questionFive').val(),
+                            $('#questionSix').val(),
+                            $('#questionSeven').val(),
+                            $('#questionEight').val(),
+                            $('#questionNine').val(),
+                            $('#questionTen').val()
+                        ]
+                    }
+                    $.post('/api/friends', newFriend, function(data){
+                        console.log(data)
+                        
+                        $('#friend-match-name').text(data[0].name)
+                        $('#friend-match-img').attr('src', data[data.length - 1].photo)
+                        $('#friend-match-modal').modal('show')
+                        
+                    })
             } else {
-                alert('Please make all questions have been answered')
+                alert('Please make sure all questions have been answered!')
             }
             }) // Close #sumbit on click handler
         }) // Close document.ready function
