@@ -22,4 +22,3 @@ Node.js, Express.js, HTML5, CSS3, and Bootstrap.
     * [server.js](./server.js)
 
 ![screenShot](/images/screenShot.jpg)
-Format: ![Alt Text](https://friend-finder064.herokuapp.com/)
