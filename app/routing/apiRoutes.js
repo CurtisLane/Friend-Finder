@@ -27,7 +27,7 @@ module.exports = function(app){
             return friendMatch
         })
 
-        // friendsData.push(userData); // If we want to add the userData to our friendData array
+        friendsData.push(userData); // If we want to add the userData to our friendData array
 
         res.json(compare);
     })
